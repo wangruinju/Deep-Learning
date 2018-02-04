@@ -1,6 +1,6 @@
 # Deep-Learning
 
-On this early morning of Super Bowl Day, I finally finished Deep Learning Specialization taught by Andrew Ng.
+In this early morning of Super Bowl Day, I finally finished Deep Learning Specialization taught by Andrew Ng.
 
 This specialization includes 5 modules:
 
