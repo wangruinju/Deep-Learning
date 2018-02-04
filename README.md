@@ -1,13 +1,17 @@
 # Deep-Learning
 
-This specialization includes 5 modules:
+On this early morning of Super Bowl Day, I finally finished Deep Learning Specialization taught by Andrew Ng.
 
-* [Course 1: Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
+# This specialization includes 5 modules:
 
-    - Understand the major technology trends driving Deep Learning
-    - Be able to build, train and apply fully connected deep neural networks 
-    - Know how to implement efficient (vectorized) neural networks 
-    - Understand the key parameters in a neural network's architecture 
+* Course 1
+
+[Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
+
+- Understand the major technology trends driving Deep Learning.
+- Be able to build, train and apply fully connected deep neural networks.
+- Know how to implement efficient (vectorized) neural networks. 
+- Understand the key parameters in a neural network's architecture. 
 
     * Week1: Be able to explain the major trends driving the rise of deep learning, and understand where and how it is applied today.
         * [Python basics with numpy](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Python%2BBasics%2BWith%2BNumpy%2Bv3.ipynb)
@@ -22,13 +26,15 @@ This specialization includes 5 modules:
         * [Build your deep neural network: Step by Step](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Building%2Byour%2BDeep%2BNeural%2BNetwork%2B-%2BStep%2Bby%2BStep%2Bv3.ipynb)
         * [Deep Neural Network Application](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Deep%2BNeural%2BNetwork%2B-%2BApplication%2Bv3.ipynb)
 
-* [Course 2: Improving Deeping Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+* Course 2
 
-    - Understand industry best-practices for building deep learning applications. 
-    - Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, gradient checking, 
-    - Be able to implement and apply a variety of optimization algorithms, such as mini-batch gradient descent, Momentum, RMSprop and Adam, and check for their convergence. 
-    - Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance
-    - Be able to implement a neural network in TensorFlow. 
+[Improving Deeping Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+
+- Understand industry best-practices for building deep learning applications. 
+- Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, gradient checking. 
+- Be able to implement and apply a variety of optimization algorithms, such as mini-batch gradient descent, Momentum, RMSprop and Adam, and check for their convergence. 
+- Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance.
+- Be able to implement a neural network in TensorFlow. 
 
     * Week 1: Practical aspects of Deep Learning
         * [Initialization](https://github.com/wangruinju/Deep-Learning/blob/master/course2_improving_deep_neural_networks/Initialization.ipynb)
@@ -41,12 +47,14 @@ This specialization includes 5 modules:
     * Week 3: Hyperparameter tuning, Batch Normalization and Programming Frameworks
         * [Tensorflow Tutorial](https://github.com/wangruinju/Deep-Learning/blob/master/course2_improving_deep_neural_networks/Tensorflow%2BTutorial.ipynb)
 
-* [Course 3: Sturcturing Machine Learning Projects](https://www.coursera.org/learn/machine-learning-projects/home/welcome)
+* Course 3
 
-    - Understand how to diagnose errors in a machine learning system, and 
-    - Be able to prioritize the most promising directions for reducing error
-    - Understand complex ML settings, such as mismatched training/test sets, and comparing to and/or surpassing human-level performance
-    - Know how to apply end-to-end learning, transfer learning, and multi-task learning
+[Sturcturing Machine Learning Projects](https://www.coursera.org/learn/machine-learning-projects/home/welcome)
+
+- Understand how to diagnose errors in a machine learning system.
+- Be able to prioritize the most promising directions for reducing error.
+- Understand complex ML settings, such as mismatched training/test sets, and comparing to and/or surpassing human-level performance.
+- Know how to apply end-to-end learning, transfer learning, and multi-task learning.
 
     * Week 1: ML Strategy (1)
         * [Bird recognition](https://github.com/wangruinju/Deep-Learning/blob/master/course3_structuring_machine_learning_projects/Week%201%20Quiz%20-%20Bird%20recognition%20in%20the%20city%20of%20Peacetopia%20(case%20study).md)
@@ -54,19 +62,21 @@ This specialization includes 5 modules:
     * Week 2: ML Strategy (2)
         * [Autonomous driving](https://github.com/wangruinju/Deep-Learning/blob/master/course3_structuring_machine_learning_projects/Week%202%20Quiz%20-%20Autonomous%20driving%20(case%20study).md)
 
-* [Course 4: Convolutional Neural Networks](https://www.coursera.org/learn/convolutional-neural-networks/home/welcome)
+* Course 4
 
-    - Understand how to build a convolutional neural network, including recent variations such as residual networks.
-    - Know how to apply convolutional networks to visual detection and recognition tasks.
-    - Know to use neural style transfer to generate art.
-    - Be able to apply these algorithms to a variety of image, video, and other 2D or 3D data.
+[Convolutional Neural Networks](https://www.coursera.org/learn/convolutional-neural-networks/home/welcome)
+
+- Understand how to build a convolutional neural network, including recent variations such as residual networks.
+- Know how to apply convolutional networks to visual detection and recognition tasks.
+- Know to use neural style transfer to generate art.
+- Be able to apply these algorithms to a variety of image, video, and other 2D or 3D data.
 
     * Week 1: Foundations of Convolutional Neural Networks
         * [Convolutional Model: step by step](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Convolution%2Bmodel%2B-%2BStep%2Bby%2BStep%2B-%2Bv2.ipynb)
         * [Convolutional model: application](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Convolution%2Bmodel%2B-%2BApplication%2B-%2Bv1.ipynb)
 
     * Week 2: Deep convolutional models: case studies
-        * [Residual Networks](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Residual%2BNetworks%2B-%2Bv2.ipynb
+        * [Residual Networks](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Residual%2BNetworks%2B-%2Bv2.ipynb)
 
     * Week 3: Object detection
         * [Car detection with YOLOv2](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Autonomous%2Bdriving%2Bapplication%2B-%2BCar%2Bdetection%2B-%2Bv1.ipynb)
@@ -75,11 +85,13 @@ This specialization includes 5 modules:
         * [Art generation with Neural Stype Transfer](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Art%2BGeneration%2Bwith%2BNeural%2BStyle%2BTransfer%2B-%2Bv2.ipynb)
         * [Face Recognition for the Happy House](https://github.com/wangruinju/Deep-Learning/blob/master/course4_convolutional_neural_networks/Face%2BRecognition%2Bfor%2Bthe%2BHappy%2BHouse%2B-%2Bv3.ipynb)
 
-* [Course 5: Sequence Models](https://www.coursera.org/learn/nlp-sequence-models/home/welcome)
+* Course 5
 
-    - Understand how to build and train Recurrent Neural Networks (RNNs), and commonly-used variants such as GRUs and LSTMs.
-    - Be able to apply sequence models to natural language problems, including text synthesis. 
-    - Be able to apply sequence models to audio applications, including speech recognition and music synthesis.
+[Sequence Models](https://www.coursera.org/learn/nlp-sequence-models/home/welcome)
+
+- Understand how to build and train Recurrent Neural Networks (RNNs), and commonly-used variants such as GRUs and LSTMs.
+- Be able to apply sequence models to natural language problems, including text synthesis. 
+- Be able to apply sequence models to audio applications, including speech recognition and music synthesis.
 
     * Week 1: Recurrent Neural Networks
         * [Build RNN: step by step](https://github.com/wangruinju/Deep-Learning/blob/master/course5_sequential_models/Building%2Ba%2BRecurrent%2BNeural%2BNetwork%2B-%2BStep%2Bby%2BStep%2B-%2Bv1.ipynb)
@@ -106,26 +118,27 @@ For the basics of machine learning, please refer to Andrew's [Maching Learning o
 
 # Other Resources
 
-> [Deep Learning textbook: Ian Goodfellow and Yoshua Bengio and Aaron Courville](http://www.deeplearningbook.org/)
+[Deep Learning textbook: Ian Goodfellow and Yoshua Bengio and Aaron Courville](http://www.deeplearningbook.org/)
 
-> [Cheat Sheets for Deep Learning](Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data)
+[Cheat Sheets for Deep Learning](Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data)
 
-> [Deep Learning Projects](http://www.samyzaf.com/ML/)
+[Deep Learning Projects](http://www.samyzaf.com/ML/)
 
-> [TensorFlow and Deep Learning without a PhD (LOL)](https://www.youtube.com/watch?v=u4alGiomYP4)
+[TensorFlow and Deep Learning without a PhD (LOL)](https://www.youtube.com/watch?v=u4alGiomYP4)
 
 * CMU maching learning
 
-> [Introduction to Machine Learning](http://www.cs.cmu.edu/~epxing/Class/10701/lecture.html)
-> [Advanced Introduction to Machine Learning](http://www.cs.cmu.edu/~epxing/Class/10715/lecture.html)
+[Introduction to Machine Learning](http://www.cs.cmu.edu/~epxing/Class/10701/lecture.html)
+
+[Advanced Introduction to Machine Learning](http://www.cs.cmu.edu/~epxing/Class/10715/lecture.html)
 
 * UBC maching learning
 
-> [Machine Learning and Data Mining](https://www.cs.ubc.ca/~schmidtm/Courses/340-F17/)
-> [Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/540-W17/)
+[Machine Learning and Data Mining](https://www.cs.ubc.ca/~schmidtm/Courses/340-F17/)
+
+[Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/540-W17/)
 
 * Hunag-yi Lee videos
 
-> [Maching Learning and Deep Learning resources](http://speech.ee.ntu.edu.tw/~tlkagk/talk.html)
-
+[Maching Learning and Deep Learning resources](http://speech.ee.ntu.edu.tw/~tlkagk/talk.html)
 
