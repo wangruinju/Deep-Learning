@@ -4,7 +4,7 @@ On this early morning of Super Bowl Day, I finally finished Deep Learning Specia
 
 # This specialization includes 5 modules:
 
-* Course 1: [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
+Course 1: [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
 
 - Understand the major technology trends driving Deep Learning.
 - Be able to build, train and apply fully connected deep neural networks.
