@@ -24,7 +24,7 @@ This specialization includes 5 modules:
         * [Build your deep neural network: Step by Step](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Building%2Byour%2BDeep%2BNeural%2BNetwork%2B-%2BStep%2Bby%2BStep%2Bv3.ipynb)
         * [Deep Neural Network Application](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Deep%2BNeural%2BNetwork%2B-%2BApplication%2Bv3.ipynb)
 
-## Course 2: [Improving Deeping Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+## Course 2: [Improving Deeping Neural Networks](https://www.coursera.org/learn/deep-neural-network/home/welcome)
 
 - Understand industry best-practices for building deep learning applications. 
 - Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, gradient checking. 
