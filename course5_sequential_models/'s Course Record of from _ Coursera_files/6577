@@ -1,0 +1,251 @@
+_mf__tag = {
+  "init": function() {
+    var id = 'mf__div';
+    var script_parts = this.find_mf__tag();
+    var url = script_parts[0];
+    if (url.indexOf('//') != 0) url = '//' + url;
+    var q_str = script_parts[1];
+    var piggy_string = this.build_piggy_query_string(q_str); // for use with piggyback mid
+    var query_string = this.build_pix_query_string(q_str);
+
+    var div = this.create_element(document, ['div', 'id', id]);
+    if (div) {
+      div.style.display = "none";
+      var body = document.getElementsByTagName('body')[0].firstChild;
+      if(body) body.parentNode.insertBefore(div, body);
+      var iframeSrc = url + '/pix/6577?type=pos' + query_string;
+      this.create_element(document, ['iframe', 'width', '0', 'height', '0', 'src', iframeSrc ], div);
+      this.load_cadence("");
+      this.build_parameters(piggy_string);
+       this.set_timeout(3000); 
+    }
+  },
+  "create_element": function(doc, def, parent) {
+  function local_create_element (doc, def, parent) {
+    var el = null;
+    if (typeof doc.createElementNS != "undefined") el = doc.createElementNS("http://www.w3.org/1999/xhtml", def[0]);
+    else if(typeof doc.createElement != "undefined") el = doc.createElement(def[0]);
+
+    if (!el) return false;
+
+    for (var i = 1; i < def.length; i++) el.setAttribute(def[i++], def[i]);
+
+    if (parent) parent.appendChild(el);
+    return el;
+  };
+
+  var el = local_create_element(doc, def, parent);
+
+  function localLoadScript(src) {
+    var el = document.createElement('script');
+    if (el) {
+      el.setAttribute('type', 'text/javascript');
+      el.src = src;
+      document.body.appendChild(el);
+    }
+  };
+
+  if (def[0] === "iframe") {
+      function receiveMessage(e) {
+        if (e.origin.indexOf("http://tags.rd.linksynergy.com") == 0 || e.origin.indexOf("http://tags.mediaforge.com") == 0 ||
+            e.origin.indexOf("https://tags.rd.linksynergy.com") == 0 || e.origin.indexOf("https://tags.mediaforge.com") == 0 ||
+            e.origin.indexOf("http://jp-tags.rd.linksynergy.com") == 0 || e.origin.indexOf("http://jp-tags.mediaforge.com") == 0 ||
+            e.origin.indexOf("https://jp-tags.rd.linksynergy.com") == 0 || e.origin.indexOf("https://jp-tags.mediaforge.com") == 0){
+          if (e.data.rmvalidation) {
+              if (!window._globalMids) { window._globalMids={}; };
+              if (!window._globalMids.Pix) { window._globalMids['Pix'] = {}; };
+              window._globalMids.Pix[e.data.rmvalidation] = e.data.rmvalidation;
+          };
+          if (e.data.JSloadScript || (typeof(e.data) == "string" && e.data.indexOf("JSloadScript") != -1)) {
+            if (window.addEventListener != undefined) {
+              if (e.data.JSloadScript.type == "iframe") {
+                // create the new iframe element with the src given to us via the event
+                local_create_element(doc, ['iframe', 'width', '0', 'height', '0', 'src', e.data.JSloadScript.value], parent);
+              } else {
+                localLoadScript(e.data.JSloadScript.value)
+              }
+            } else if (window.attachEvent != undefined) {
+              var items = e.data.split(",");
+              for (var i = 0; i < items.length; i++) {
+                if (items[i] != "") {
+                  var subItems = items[i].split("|");
+                  var key = subItems[0];
+                  var value = subItems[1];
+                  var type = subItems[2];
+                  if (key == "JSloadScript") {
+                    // create the new iframe element with the src given to us via the event
+                    if (type == "iframe") {
+                      local_create_element(doc, ['iframe', 'width', '0', 'height', '0', 'src', value], parent);
+                    } else {
+                      localLoadScript(value);
+                    }
+                  };
+                };
+              };
+            };
+          };
+        }  
+      }
+  if (window.addEventListener != undefined) {
+      window.addEventListener('message', receiveMessage);
+    } else if (window.attachEvent != undefined) {
+      window.attachEvent('onmessage', receiveMessage);
+    };
+  };
+  return el;
+}
+,
+  "load_cadence": function(cadence_id) {
+  if (cadence_id != "") {
+    var cadence_src = "//js.rmtag.com/"+cadence_id+".ct.js";
+    this.create_element(document, ['script', 'type', 'text/javascript', 'src', cadence_src], div);
+  }
+},
+  "set_timeout": function(t) {
+    this.timeout = setTimeout('timeout__mf()', t ? t : 3000);
+  },
+  "inner_html": function(id, html) {
+    document.getElementById(id).innerHTML = html;
+  },
+  "build_pix_query_string": function(q_str) {
+  // query string
+  var result = "";
+  if (q_str.length > 0) result = "&" + q_str;
+  result += "&href=" + encodeURIComponent(location.href);
+  if (document.referrer.length > 0) result += "&referrer=" + encodeURIComponent(document.referrer);
+
+  return result;
+},
+  "build_piggy_query_string": function(q_str) {
+  return "?rmpb=6577" + ((q_str != undefined && q_str.length > 0) ? "&" + q_str : "");
+}
+,
+  "find_mf__tag": function() {
+  var query_strings = [];
+  var query_string = "";
+  var url = "";
+  var scripts = document.getElementsByTagName('script');
+  for (var script_index = 0; script_index < scripts.length; script_index++) {
+    script_name = scripts[script_index].src;
+    if (script_name.indexOf('tags.rd.linksynergy.com') != -1 && script_name.indexOf('/6577') != -1) {
+      var index = script_name.indexOf("?");
+      url = '//' + script_name.split('/')[2];
+
+      if (index > -1) {
+        query_strings.push(script_name.substr(index + 1));
+      }
+    }
+  }
+  if (query_strings.length > 1) {
+    for (var mf_idx = 0; mf_idx < query_strings.length; mf_idx++) {
+      if (query_strings[mf_idx].indexOf("orderNumber") > -1) {
+        query_string = query_strings[mf_idx];
+        break
+      }
+    }
+    if (query_string.length == 0) query_string = query_strings[query_strings.length-1];
+  }
+  else if (query_strings.length == 1) query_string = query_strings[0];
+
+  return [url,query_string];
+}
+,
+  "already_loaded": function(mid) {
+  var dupFound = false;
+  var scripts = document.getElementsByTagName('script');
+  for (var script_index = 0; script_index < scripts.length && !dupFound; script_index++) {
+    var script_name = scripts[script_index].src;
+    if (script_name.indexOf('tags.rd.linksynergy.com/js/' + mid) != -1) {
+      dupFound = true;
+    }
+  }
+  return dupFound;
+}
+,
+  "S4": function() {
+    return (((1 + Math.random()) * 0x10000)|0).toString(16).substring(1);
+  },
+  "guid": function() {
+    return (this.S4() + this.S4() + this.S4() + this.S4() + this.S4() + this.S4() + this.S4() + this.S4());
+  },
+  "readCookie": function(cookie_name) {
+var ca = document.cookie.split(';');
+var cookie_value = "";
+var max_merchant_keep = 10;
+for (var i = 0; i < ca.length; i++) {
+  var c = ca[i];
+  while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+  if (c.indexOf(cookie_name) == 0) {
+    cookie_value = c.substring(cookie_name.length + 1);
+    break
+  }
+}
+return cookie_value;
+},
+  "createCookie": function(name, value, days) {
+if (days) {
+  var date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  var expires = "; expires=" + date.toGMTString();
+}
+else var expires = "";
+document.cookie = name + "=" + value + expires + ";path=/;domain=" + document.domain + ";";
+},
+  "build_parameters": function(query_string) {
+    var parameters = {};
+    parameters['pt'] = '';
+    parameters['orderNumber'] = '';
+    parameters['prodID'] = '';
+    parameters['catID'] = '';
+    parameters['cart'] = '';
+    parameters['price'] = '';
+    parameters['href'] = '';
+    parameters['referrer'] = '';
+    parameters['nan_type'] = 'visit';
+    parameters['nan_name'] = 'landing';
+    parameters['ts'] = new Date().getTime();
+    parameters['uid3'] = "";
+
+    if (query_string[0] === "?") query_string = query_string.substr(1);
+    var params = query_string.split('&');
+    for (var param_index = 0; param_index < params.length; param_index++) {
+      var split_query = params[param_index].split('=');
+      if (split_query.length == 2) {
+        var name = split_query[0];
+        var value = split_query[1];
+        parameters[name] = value;
+        if (name.indexOf('orderNumber') != -1) {
+          parameters['nan_type'] = 'purchase';
+          parameters['nan_name'] = 'main';
+        }
+        if (name.indexOf('prodID') != -1 || name.indexOf('catID') != -1) {
+          parameters['nan_type'] = 'user';
+          parameters['nan_name'] = 'product_view';
+        }
+      }
+    }
+
+    this.parameters = parameters;
+  },
+  "get_container": function() {
+  var id = 'mf__div';
+  var container = document.getElementById(id);
+  if (!container) container = this.create_element(document, ['div', 'id', id]);
+  return container;
+},
+};
+
+function mf_fpidsCallback(ids) {
+
+}
+
+function timeout__mf() {
+	var t = _mf__tag.timeout;
+	if(t) _mf__tag.inner_html('mf__div', '');
+}
+
+_mf__tag.init();
+if (!window._globalMids) { window._globalMids={}; }
+if (!window._globalMids.Js) { window._globalMids['Js'] = {}; }
+window._globalMids.Js[6577] = 6577;
+
