@@ -2,7 +2,7 @@
 
 On this early morning of Super Bowl Day, I finally finished Deep Learning Specialization taught by Andrew Ng.
 
-# This specialization includes 5 modules:
+This specialization includes 5 modules:
 
 ## Course 1: [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
 
@@ -24,7 +24,11 @@ On this early morning of Super Bowl Day, I finally finished Deep Learning Specia
         * [Build your deep neural network: Step by Step](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Building%2Byour%2BDeep%2BNeural%2BNetwork%2B-%2BStep%2Bby%2BStep%2Bv3.ipynb)
         * [Deep Neural Network Application](https://github.com/wangruinju/Deep-Learning/blob/master/course1_neural_networks_and_deep_learning/Deep%2BNeural%2BNetwork%2B-%2BApplication%2Bv3.ipynb)
 
+<<<<<<< HEAD
 ## Course 2: [Improving Deeping Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+=======
+## Course 2: [Improving Deeping Neural Networks](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+>>>>>>> 56993a709ae8689a950515efadc684b5bd555a2c
 
 - Understand industry best-practices for building deep learning applications. 
 - Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, gradient checking. 
