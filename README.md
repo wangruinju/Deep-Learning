@@ -110,7 +110,7 @@ For the basic of machine learning, please refer to Andrew's [Maching Learning on
 
 [Deep Learning textbook: Ian Goodfellow and Yoshua Bengio and Aaron Courville](http://www.deeplearningbook.org/)
 
-[Cheat Sheets for Deep Learning](Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Big Data)
+[Cheat Sheets for Deep Learning](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
 
 [Deep Learning Projects](http://www.samyzaf.com/ML/)
 
