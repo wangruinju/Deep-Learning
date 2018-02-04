@@ -104,7 +104,7 @@ I have also reviewed two amazing courses offered by Stanford University, which a
 
 * [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)
 
-For the basics of machine learning, please refer to Andrew's [Maching Learning on Coursera](https://www.coursera.org/learn/machine-learning/home/welcome) and [CS229: Maching Learning](http://cs229.stanford.edu/). Here is [my GitHub repo](https://github.com/wangruinju/Machine-Learning-Coursera) for Andrew's Machine Learning course as guidance if needed.
+For the basic of machine learning, please refer to Andrew's [Maching Learning on Coursera](https://www.coursera.org/learn/machine-learning/home/welcome) and [CS229: Maching Learning](http://cs229.stanford.edu/). Here is [my GitHub repo](https://github.com/wangruinju/Machine-Learning-Coursera) for Andrew's Machine Learning course as guidance if needed.
 
 # Other Resources
 
